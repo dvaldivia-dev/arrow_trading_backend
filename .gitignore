@@ -1,0 +1,16 @@
+# Node.js
+node_modules/
+dist/
+.env
+
+# Visual Studio / Windows
+*.log
+*.tmp
+*.user
+*.suo
+.vscode/
+
+package-lock.json
+
+# Mac
+.DS_Store
