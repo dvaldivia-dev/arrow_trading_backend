@@ -43,7 +43,7 @@ export const getInvoiceList = async (req, res) => {
     const query = `
       SELECT 
         Id as id,
-        Num as invoiceNo,
+        Num,
         S0Num,
         IssueDate as issueDate,
         BillTo as billTo,
