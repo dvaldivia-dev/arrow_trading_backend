@@ -649,10 +649,12 @@ export const getIncotermList = async (req, res) => {
 
 const transporter = nodemailer.createTransport({
   // Ejemplo de configuración SMTP de Gmail
-  service: "gmail",
+  host: "smtp.zoho.com",
+  port: 465,
+  secure: true,
   auth: {
-    user: "danyel.valo@gmail.com", //"billing@arrowtradecenter.com",
-    pass: "swtx xpnu vkem rbmv", //"wcAt3j*z", // Usar contraseñas de aplicación/token OAuth
+    user: "billing@arrowtradecenter.com", //"",
+    pass: "wcAt3j*z", //"swtx xpnu vkem rbmv", , // Usar contraseñas de aplicación/token OAuth
   },
 });
 
@@ -692,7 +694,7 @@ export const sendInvoicesEmail = async (req, res) => {
 
     // 3. Configurar y enviar el correo electrónico
     const mailOptions = {
-      from: "Arrow trading <billing@arrowtradecenter.com>",
+      from: "Arrow trade center <billing@arrowtradecenter.com>",
       to: recipientEmails.join(", "), // Nodemailer acepta un string separado por comas
       subject: subject,
       html: messageHtml,
